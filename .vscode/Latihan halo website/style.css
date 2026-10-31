@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cv-card {
+    width: 750px;
+   background: linear-gradient(to right, #fdbb2d, #f57c00, #e53935);
+    border-radius: 4px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.name-box {
+    background: #ffffff;
+    padding: 12px 25px;
+    border-radius: 2px;
+    flex-grow: 1;
+    margin-right: 25px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.name-box h1 {
+    font-size: 26px;
+    color: #111;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover; 
+    object-position: center 20%; 
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    background-color: #ccc;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    position: relative;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateX(-50%);
+}
+
+.section-title {
+    background-color: #ffffff;
+    color: #111;
+    padding: 5px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    display: block;
+    border: 1px solid #ccc;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section {
+    margin-bottom: 22px;
+}
+
+.section p {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #111;
+    font-weight: 500;
+}
+
+.section ul {
+    list-style: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.contact-info label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

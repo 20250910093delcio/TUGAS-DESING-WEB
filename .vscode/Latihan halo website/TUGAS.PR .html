@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Keluarga</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background:white;
+            width: 100%;
+            max-width: 650px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px (210, 203, 203, 0.867);
+        }
+
+        /* Class untuk menyembunyikan halaman */
+        .hidden {
+            display: none;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            padding-bottom: 10px;
+        }
+
+        /* Tabel Utama Profile Keluarga */
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table-custom th, .table-custom td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table-custom th {
+            background-color: white;
+            color:black;
+        }
+
+        /* Tabel Detail Profile */
+        .table-detail {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table-detail td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            color: black;
+        }
+
+        /* Tombol Lihat & Kembali */
+        .btn-lihat {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color:white;
+            color:black;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-lihat:hover {
+            background-color: white;
+        }
+
+        .action-bar {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .btn-kembali {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-kembali:hover {
+            background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div id="page-keluarga" class="card">
+        <h2>PROFILE KELUARGA</h2>
+        <table class="table-custom">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>KELUARGA</th>
+                    <th>PERAN</th>
+                    <th>DETAIL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>AYAH</td>
+                    <td>Seorang ayah adalah orang yang membimbing keluarganya untuk menjadi baik.</td>
+                    <td><button class="btn-lihat" onclick="showPage('page-ayah')">Lihat</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>IBU</td>
+                    <td>Pengelola Rumah Tangga</td>
+                    <td><button class="btn-lihat" onclick="showPage('page-ibu')">Lihat</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ANAK</td>
+                    <td>Anak Pertama</td>
+                    <td><button class="btn-lihat" onclick="showPage('page-anak pertama')">Lihat</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>ANAK</td>
+                    <td>Anak kedua</td>
+                    <td><button class="btn-lihat" onclick="showPage('page-anak kedua')">Lihat</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>ANAK</td>
+                    <td>Anak ketiga</td>
+                    <td><button class="btn-lihat" onclick="showPage('page-anak ketiga')">Lihat</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="page-ayah" class="card hidden">
+        <h2> PROFILE AYAH</h2>
+        <table class="table-detail">
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td><strong>NAMA LENGKAP</strong></td>
+                        <td>:Domingus da silva </td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td><strong>PEKERJAAN </strong></td>
+                        <td>:POLICIA</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td><strong>EMAIL</strong></td>
+                        <td>: domingus@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td><strong>ASAL</strong></td>
+                        <td>:TIMOR-LESTE</td>
+                    </tr>
+                  
+        </table>
+        <div class="action-bar">
+            <button class="btn-kembali" onclick="showPage('page-keluarga')">Kembali</button>
+        </div>
+    </div>
+
+    <div id="page-ibu" class="card hidden">
+        <h2> PROFILE IBU </h2>
+        <table class="table-detail">
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td><strong>NAMA LENGKAP</strong></td>
+                        <td>: Alda da costa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td><strong>PEKERJAAN</strong></td>
+                        <td>: Ibu Rumah Tangga</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td><strong>EMAINL</strong></td>
+                        <td>: Alda@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td><strong>Asal</strong></td>
+                        <td>:TIMOR-LESTE</td>
+                    </tr>
+                
+        </table>
+        <div class="action-bar">
+            <button class="btn-kembali" onclick="showPage('page-keluarga')">Kembali</button>
+        </div>
+    </div>
+
+    <div id="page-anak" class="card hidden">
+        <h2>Profile Anak pertama</h2>
+        <table class="table-detail">
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td><strong>Nama Lengkap</strong></td>
+                        <td>:Delcio da silva carvalho</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td><strong>NIM</strong></td>
+                        <td>:20250910093</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td><strong>Status</strong></td>
+                        <td>: Mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td><strong>No. HP</strong></td>
+                        <td>:085801071307</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5.</strong></td>
+                        <td><strong>Email</strong></td>
+                        <td>: delciodasilva@gmail.com</td>
+            </tr>
+        </table>
+        <div class="action-bar">
+            <button class="btn-kembali" onclick="showPage('page-keluarga')">Kembali</button>
+        </div>
+    </div>
+           
+    <div id="page-anak" class="card hidden">
+        <h2>Profile Anak kedua</h2>
+        <table class="table-detail">
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td><strong>Nama Lengkap</strong></td>
+                        <td>:Delcio da silva carvalho</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td><strong>NIM</strong></td>
+                        <td>:20250910093</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td><strong>Status</strong></td>
+                        <td>: Mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td><strong>No. HP</strong></td>
+                        <td>:085801071307</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5.</strong></td>
+                        <td><strong>Email</strong></td>
+                        <td>: delciodasilva@gmail.com</td>
+            </tr>
+        </table>
+        <div class="action-bar">
+            <button class="btn-kembali" onclick="showPage('page-keluarga')">Kembali</button>
+        </div>
+    </div>
+        <div id="page-anak" class="card hidden">
+        <h2>Profile Anak ketiga</h2>
+        <table class="table-detail">
+                    <tr>
+                        <td><strong>1.</strong></td>
+                        <td><strong>Nama Lengkap</strong></td>
+                        <td>:Delcio da silva carvalho</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2.</strong></td>
+                        <td><strong>NIM</strong></td>
+                        <td>:20250910093</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3.</strong></td>
+                        <td><strong>Status</strong></td>
+                        <td>: Mahasiswa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4.</strong></td>
+                        <td><strong>No. HP</strong></td>
+                        <td>:085801071307</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5.</strong></td>
+                        <td><strong>Email</strong></td>
+                        <td>: delciodasilva@gmail.com</td>
+            </tr>
+        </table>
+        <div class="action-bar">
+            <button class="btn-kembali" onclick="showPage('page-keluarga')">Kembali</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.add('hidden');
+            });
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
